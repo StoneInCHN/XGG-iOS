@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  iDste
+//
+//  Created by mini1 on 16/1/27.
+//  Copyright © 2016年 jiwuwang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "HenticaLib.h"
+#import "define.h"
+
+#ifdef DEBUG
+#define HenLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define HenLog( s, ... )
+#endif
+
+#endif /* PrefixHeader_pch */
