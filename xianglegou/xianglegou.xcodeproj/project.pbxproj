@@ -19,6 +19,12 @@
 		CD11F42E1F57EA18000AE75E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11F42C1F57EA18000AE75E /* libcrypto.a */; };
 		CD11F42F1F57EA18000AE75E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11F42D1F57EA18000AE75E /* libssl.a */; };
 		CD6D3EF71F567B4F00127852 /* JiuPaiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */; };
+		CDA092F91F5CE75500A13B01 /* jcore-ios-1.1.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */; };
+		CDA092FA1F5CE75500A13B01 /* jpush-ios-3.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */; };
+		CDA092FC1F5CE7C900A13B01 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FB1F5CE7C900A13B01 /* CoreFoundation.framework */; };
+		CDA092FE1F5CE7FD00A13B01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FD1F5CE7FD00A13B01 /* Foundation.framework */; };
+		CDA093001F5CE80700A13B01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FF1F5CE80700A13B01 /* UIKit.framework */; };
+		CDA093021F5CE82E00A13B01 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA093011F5CE82E00A13B01 /* AdSupport.framework */; };
 		EC00BEEE1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */; };
 		EC00C0BB1ED51452009B3AFC /* GC_AddWarningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BA1ED51452009B3AFC /* GC_AddWarningTableViewCell.m */; };
 		EC00C0BE1ED56672009B3AFC /* GC_BankBindingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BD1ED56672009B3AFC /* GC_BankBindingModel.m */; };
@@ -262,8 +268,6 @@
 		ECD5D8A51E89FC6F00B6EE0A /* GC_UserLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD5D8A41E89FC6F00B6EE0A /* GC_UserLoginViewModel.m */; };
 		ECD5D8A81E89FE0900B6EE0A /* GC_GetSmsCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD5D8A71E89FE0900B6EE0A /* GC_GetSmsCodeViewModel.m */; };
 		ECD5D8AE1E8A0ABE00B6EE0A /* GC_MineMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD5D8AD1E8A0ABE00B6EE0A /* GC_MineMessageModel.m */; };
-		ECDA23281EC1C96E00DD55E3 /* jcore-ios-1.1.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDA23251EC1C96E00DD55E3 /* jcore-ios-1.1.3.a */; };
-		ECDA23291EC1C96E00DD55E3 /* jpush-ios-3.0.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDA23261EC1C96E00DD55E3 /* jpush-ios-3.0.5.a */; };
 		ECDA232B1EC1CB3E00DD55E3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDA232A1EC1CB3E00DD55E3 /* libresolv.tbd */; };
 		ECDA232D1EC1CB5500DD55E3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDA232C1EC1CB5500DD55E3 /* UserNotifications.framework */; };
 		ECDA25951EC1E02300DD55E3 /* login_delete2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDA25931EC1E02300DD55E3 /* login_delete2@2x.png */; };
@@ -798,6 +802,14 @@
 		CD11F42D1F57EA18000AE75E /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		CD6D3EF51F567B4F00127852 /* JiuPaiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiuPaiWebViewController.h; sourceTree = "<group>"; };
 		CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiuPaiWebViewController.m; sourceTree = "<group>"; };
+		CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.5.a"; sourceTree = "<group>"; };
+		CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.6.a"; sourceTree = "<group>"; };
+		CDA092F81F5CE75500A13B01 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		CDA092FB1F5CE7C900A13B01 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CDA092FD1F5CE7FD00A13B01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CDA092FF1F5CE80700A13B01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CDA093011F5CE82E00A13B01 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		CDA093031F5CEA7900A13B01 /* xianglegou.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xianglegou.entitlements; sourceTree = "<group>"; };
 		EC00BEEC1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_ShopReplyCommentTableViewCell.h; sourceTree = "<group>"; };
 		EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC_ShopReplyCommentTableViewCell.m; sourceTree = "<group>"; };
 		EC00C0B91ED51452009B3AFC /* GC_AddWarningTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_AddWarningTableViewCell.h; sourceTree = "<group>"; };
@@ -1161,9 +1173,6 @@
 		ECD5D8A71E89FE0900B6EE0A /* GC_GetSmsCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC_GetSmsCodeViewModel.m; sourceTree = "<group>"; };
 		ECD5D8AC1E8A0ABE00B6EE0A /* GC_MineMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_MineMessageModel.h; sourceTree = "<group>"; };
 		ECD5D8AD1E8A0ABE00B6EE0A /* GC_MineMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC_MineMessageModel.m; sourceTree = "<group>"; };
-		ECDA23251EC1C96E00DD55E3 /* jcore-ios-1.1.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.3.a"; sourceTree = "<group>"; };
-		ECDA23261EC1C96E00DD55E3 /* jpush-ios-3.0.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.5.a"; sourceTree = "<group>"; };
-		ECDA23271EC1C96E00DD55E3 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		ECDA232A1EC1CB3E00DD55E3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		ECDA232C1EC1CB5500DD55E3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		ECDA25931EC1E02300DD55E3 /* login_delete2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_delete2@2x.png"; sourceTree = "<group>"; };
@@ -2005,16 +2014,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA093021F5CE82E00A13B01 /* AdSupport.framework in Frameworks */,
+				FC7D4DCD1E84BE4000666C69 /* Security.framework in Frameworks */,
+				CDA093001F5CE80700A13B01 /* UIKit.framework in Frameworks */,
+				CDA092FE1F5CE7FD00A13B01 /* Foundation.framework in Frameworks */,
+				CDA092FC1F5CE7C900A13B01 /* CoreFoundation.framework in Frameworks */,
+				CDA092F91F5CE75500A13B01 /* jcore-ios-1.1.5.a in Frameworks */,
 				ECDA232D1EC1CB5500DD55E3 /* UserNotifications.framework in Frameworks */,
 				ECDA232B1EC1CB3E00DD55E3 /* libresolv.tbd in Frameworks */,
 				FC7D4DD11E84BE7500666C69 /* libstdc++.6.0.9.tbd in Frameworks */,
 				FC7D4DCF1E84BE5C00666C69 /* libsqlite3.0.tbd in Frameworks */,
-				FC7D4DCD1E84BE4000666C69 /* Security.framework in Frameworks */,
 				FC7D4DCB1E84BE1D00666C69 /* OpenGLES.framework in Frameworks */,
 				CD11F42A1F57E933000AE75E /* BaiduMapAPI_Search.framework in Frameworks */,
-				ECDA23281EC1C96E00DD55E3 /* jcore-ios-1.1.3.a in Frameworks */,
 				FC7D4DC91E84BDF900666C69 /* CoreLocation.framework in Frameworks */,
 				FC25DCF51E73A21A008904AB /* libSocialSina.a in Frameworks */,
+				CDA092FA1F5CE75500A13B01 /* jpush-ios-3.0.6.a in Frameworks */,
 				FC25DD3A1E73A21A008904AB /* AlipaySDK.framework in Frameworks */,
 				FC25DCF81E73A21A008904AB /* libSocialWeChat.a in Frameworks */,
 				FC25DCF91E73A21A008904AB /* libWeChatSDK.a in Frameworks */,
@@ -2038,7 +2052,6 @@
 				FCADC1E21DDD4FDC0035F011 /* ImageIO.framework in Frameworks */,
 				FC25DCFD1E73A21A008904AB /* UMSocialNetwork.framework in Frameworks */,
 				FCADC1E01DDD4FD50035F011 /* CoreTelephony.framework in Frameworks */,
-				ECDA23291EC1C96E00DD55E3 /* jpush-ios-3.0.5.a in Frameworks */,
 				FCADC1DE1DDD4FC90035F011 /* SystemConfiguration.framework in Frameworks */,
 				CD11F4281F57E933000AE75E /* BaiduMapAPI_Location.framework in Frameworks */,
 				CD11F42F1F57EA18000AE75E /* libssl.a in Frameworks */,
@@ -2471,9 +2484,9 @@
 		ECDA23241EC1C96E00DD55E3 /* JPush */ = {
 			isa = PBXGroup;
 			children = (
-				ECDA23251EC1C96E00DD55E3 /* jcore-ios-1.1.3.a */,
-				ECDA23261EC1C96E00DD55E3 /* jpush-ios-3.0.5.a */,
-				ECDA23271EC1C96E00DD55E3 /* JPUSHService.h */,
+				CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */,
+				CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */,
+				CDA092F81F5CE75500A13B01 /* JPUSHService.h */,
 			);
 			path = JPush;
 			sourceTree = "<group>";
@@ -4165,6 +4178,10 @@
 		FC7D4DC71E84BDF800666C69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDA093011F5CE82E00A13B01 /* AdSupport.framework */,
+				CDA092FF1F5CE80700A13B01 /* UIKit.framework */,
+				CDA092FD1F5CE7FD00A13B01 /* Foundation.framework */,
+				CDA092FB1F5CE7C900A13B01 /* CoreFoundation.framework */,
 				ECDA232C1EC1CB5500DD55E3 /* UserNotifications.framework */,
 				ECDA232A1EC1CB3E00DD55E3 /* libresolv.tbd */,
 				FC7D4DD01E84BE7500666C69 /* libstdc++.6.0.9.tbd */,
@@ -4200,6 +4217,7 @@
 		FCADBEBD1DDD4ABB0035F011 /* xianglegou */ = {
 			isa = PBXGroup;
 			children = (
+				CDA093031F5CEA7900A13B01 /* xianglegou.entitlements */,
 				FC25DA5B1E73A219008904AB /* HenticaLib */,
 				FCADBEF21DDD4D240035F011 /* Classes */,
 				FCADC0FB1DDD4D240035F011 /* Resource */,
@@ -4579,6 +4597,11 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = J7VJEFQF7J;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					FCADBED31DDD4ABB0035F011 = {
 						CreatedOnToolsVersion = 7.2;
@@ -5498,6 +5521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = xianglegou/xianglegou.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guizhou XiangGeGou Network Technology Co., Ltd. (J7VJEFQF7J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J7VJEFQF7J;
@@ -5529,6 +5553,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/xianglegou/Classes/3rd/JPush/JPUSHService.h";
 				WARNING_CFLAGS = (
 					"-Wno-unused-variable",
 					"-Wno-format",
@@ -5547,6 +5572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = xianglegou/xianglegou.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guizhou XiangGeGou Network Technology Co., Ltd. (J7VJEFQF7J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J7VJEFQF7J;
@@ -5578,6 +5604,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/xianglegou/Classes/3rd/JPush/JPUSHService.h";
 				WARNING_CFLAGS = (
 					"-Wno-unused-variable",
 					"-Wno-format",
