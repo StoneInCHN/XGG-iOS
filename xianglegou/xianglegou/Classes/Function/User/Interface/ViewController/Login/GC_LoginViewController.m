@@ -9,15 +9,13 @@
 #import "GC_LoginViewController.h"
 #import "GC_RegisteredViewController.h"
 #import "GC_GetBackPwdViewController.h"
-
-
 #import "GC_LoginIconTableViewCell.h"
 #import "GC_LoginRowTableViewCell.h"
 #import "GC_LoginButtonTableViewCell.h"
-
 #import "GC_UserLoginViewModel.h"
 #import "GC_GetSmsCodeViewModel.h"
-
+#import "SetupPushRequestParam.h"
+#import "UserPushViewModel.h"
 
 @interface GC_LoginViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,6 +34,9 @@
 
 ///ViewModel
 @property (nonatomic, strong) GC_UserLoginViewModel *viewModel;
+
+/// UserPushViewModel
+@property (nonatomic, strong) UserPushViewModel *pushViewModel;
 
 ///发送短信 ViewModel
 @property (nonatomic, strong) GC_GetSmsCodeViewModel *smsCodeViewModel;
@@ -220,7 +221,7 @@
         [weakSelf hideHud];
         if([code isEqualToString:@"0000"]){
             [weakSelf.navigationController popViewControllerAnimated:YES];
-            
+            [weakSelf.pushViewModel uploadPushRegisterId];
             if(weakSelf.onLoginSuccessBlock){
                 weakSelf.onLoginSuccessBlock();
             }
@@ -239,6 +240,7 @@
     WEAKSelf;
     registered.onRegisteredSuccessBlock = ^(){
         [weakSelf.navigationController popViewControllerAnimated:YES];
+        [weakSelf.pushViewModel uploadPushRegisterId];
         if(weakSelf.onLoginSuccessBlock){
             weakSelf.onLoginSuccessBlock();
         }
@@ -447,6 +449,13 @@
     return _viewModel;
 }
 
+// UserPushViewModel
+- (UserPushViewModel *)pushViewModel {
+    if(!_pushViewModel){
+        _pushViewModel = [[UserPushViewModel alloc] init];
+    }
+    return _pushViewModel;
+}
 
 ///SmsCodeViewModek
 - (GC_GetSmsCodeViewModel *)smsCodeViewModel

@@ -10,6 +10,7 @@
 #import "QL_WaiteViewController.h"
 #import "GC_LoginViewController.h"
 #import "RebateTabBarViewController.h"
+#import "UserPushViewModel.h"
 
 // 引入JPush功能所需头文件
 #import "JPUSHService.h"
@@ -26,10 +27,7 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     self.appDelegateManager = [Hen_AppDelegateManager shareAppDelegateManager];
     //相关初始化
     [self.appDelegateManager relatedInitialization];
@@ -41,14 +39,14 @@
     [DATAMODEL synchronizationUserInfo];
     //开启定位
     [self startLocation];
+    /// 判断是否有推送消息
+    [self chheckePushWithOptions:launchOptions];
     //初始化极光推送
     [self initJPushForDidFinishLaunchingWithOptions:launchOptions];
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[QL_WaiteViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -202,8 +200,6 @@
 ///初始化极光推送
 - (void)initJPushForDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //Required
-    //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
@@ -212,14 +208,28 @@
         // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
     }
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    // init Push
-    // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
-    // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
     [JPUSHService setupWithOption:launchOptions
                            appKey:@"185adad8b0cb08eb9a2e6354"
                           channel:@"channel"
                  apsForProduction:0
             advertisingIdentifier:nil];
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+        if (registrationID.length != 0) {
+            DATAMODEL.registerId = registrationID;
+            if (DATAMODEL.token.length != 0 && DATAMODEL.userId.length != 0) {
+                UserPushViewModel * viewModel = [[ UserPushViewModel alloc]init];
+                [viewModel uploadPushRegisterId];
+            }
+        }
+    }];
+}
+
+/// 判断是否有推送消息
+- (void)chheckePushWithOptions: (NSDictionary *)launchOptions {
+    NSDictionary *userInfo = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (userInfo) {
+        NSLog(@"push message: %@", userInfo);
+    }
 }
 
 #pragma mark- JPUSHRegisterDelegate
@@ -242,5 +252,6 @@
     }
     completionHandler();  // 系统要求执行这个方法
 }
+
 
 @end

@@ -202,5 +202,7 @@
 ///营业中心业务员数
 #define agent_salesmanCountReport       @"/rebate-interface/agent/salesmanCountReport.jhtml"
 
+/// 设置推送ID
+#define set_pushId                      @"/rebate-interface/common/setJpushId.jhtml"
 
 #endif /* ActionDefine_h */

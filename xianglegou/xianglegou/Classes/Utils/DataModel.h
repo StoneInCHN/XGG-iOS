@@ -47,6 +47,8 @@
 @property(nonatomic, strong) NSString *latitude;
 ///所在位置经度
 @property(nonatomic, strong) NSString *longitude;
+/// jpush registerId
+@property(nonatomic, strong) NSString *registerId;
 
 ///RSA publickey
 @property(nonatomic, strong) NSString *RSAPublickey;

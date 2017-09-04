@@ -25,6 +25,8 @@
 		CDA092FE1F5CE7FD00A13B01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FD1F5CE7FD00A13B01 /* Foundation.framework */; };
 		CDA093001F5CE80700A13B01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FF1F5CE80700A13B01 /* UIKit.framework */; };
 		CDA093021F5CE82E00A13B01 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA093011F5CE82E00A13B01 /* AdSupport.framework */; };
+		CDA093061F5D3AE800A13B01 /* SetupPushRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA093051F5D3AE800A13B01 /* SetupPushRequestParam.m */; };
+		CDA093091F5D3BD600A13B01 /* UserPushViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA093081F5D3BD600A13B01 /* UserPushViewModel.m */; };
 		EC00BEEE1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */; };
 		EC00C0BB1ED51452009B3AFC /* GC_AddWarningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BA1ED51452009B3AFC /* GC_AddWarningTableViewCell.m */; };
 		EC00C0BE1ED56672009B3AFC /* GC_BankBindingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BD1ED56672009B3AFC /* GC_BankBindingModel.m */; };
@@ -810,6 +812,10 @@
 		CDA092FF1F5CE80700A13B01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CDA093011F5CE82E00A13B01 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CDA093031F5CEA7900A13B01 /* xianglegou.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xianglegou.entitlements; sourceTree = "<group>"; };
+		CDA093041F5D3AE800A13B01 /* SetupPushRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupPushRequestParam.h; sourceTree = "<group>"; };
+		CDA093051F5D3AE800A13B01 /* SetupPushRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupPushRequestParam.m; sourceTree = "<group>"; };
+		CDA093071F5D3BD600A13B01 /* UserPushViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPushViewModel.h; sourceTree = "<group>"; };
+		CDA093081F5D3BD600A13B01 /* UserPushViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPushViewModel.m; sourceTree = "<group>"; };
 		EC00BEEC1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_ShopReplyCommentTableViewCell.h; sourceTree = "<group>"; };
 		EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC_ShopReplyCommentTableViewCell.m; sourceTree = "<group>"; };
 		EC00C0B91ED51452009B3AFC /* GC_AddWarningTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_AddWarningTableViewCell.h; sourceTree = "<group>"; };
@@ -2410,6 +2416,8 @@
 			children = (
 				EC3E94141E8CA81D00DF7AFA /* GC_MReqLoginDataModel.h */,
 				EC3E94151E8CA81D00DF7AFA /* GC_MReqLoginDataModel.m */,
+				CDA093041F5D3AE800A13B01 /* SetupPushRequestParam.h */,
+				CDA093051F5D3AE800A13B01 /* SetupPushRequestParam.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -4513,6 +4521,8 @@
 				ECD5D8A71E89FE0900B6EE0A /* GC_GetSmsCodeViewModel.m */,
 				ECD337181E9B9D94007C9566 /* GC_ConfigurationViewModel.h */,
 				ECD337191E9B9D94007C9566 /* GC_ConfigurationViewModel.m */,
+				CDA093071F5D3BD600A13B01 /* UserPushViewModel.h */,
+				CDA093081F5D3BD600A13B01 /* UserPushViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -5132,6 +5142,7 @@
 				FC2E7A231E8A35D20005C176 /* QL_SSLoadLogoTableViewCell.m in Sources */,
 				FC5DF3FA1E825F0000E6FABB /* QL_BDCommentTableViewCell.m in Sources */,
 				FC25DC9F1E73A21A008904AB /* MJRefreshFooter.m in Sources */,
+				CDA093091F5D3BD600A13B01 /* UserPushViewModel.m in Sources */,
 				FC25DC761E73A21A008904AB /* NSManagedObject+MagicalAggregation.m in Sources */,
 				EC7532DA1EC455FE00999A60 /* GC_PaymentIncomeInfoTableViewCell.m in Sources */,
 				FC25DC8F1E73A21A008904AB /* MASConstraintMaker.m in Sources */,
@@ -5232,6 +5243,7 @@
 				FC25DC971E73A21A008904AB /* MBProgressHUD.m in Sources */,
 				FC25DD751E73A345008904AB /* Hen_BaseViewModel.m in Sources */,
 				FC62269D1E95ED21000E357F /* QL_MineShopViewViewModel.m in Sources */,
+				CDA093061F5D3AE800A13B01 /* SetupPushRequestParam.m in Sources */,
 				EC84DBF61EC99EFB005F9CB1 /* GC_PayMoneyTableViewCell.m in Sources */,
 				FC69C7C61E8504940049E01A /* Hen_MessageManager.m in Sources */,
 				FC25DD101E73A21A008904AB /* UILabel+CreateLabel.m in Sources */,
