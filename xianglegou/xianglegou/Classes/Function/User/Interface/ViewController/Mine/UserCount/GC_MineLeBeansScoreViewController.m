@@ -278,19 +278,19 @@
             [view addSubview:self.withdrawButton];
             [self.withdrawButton mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.bottom.equalTo(view);
-                make.width.mas_equalTo(kMainScreenWidth/2-0.5);
+                make.width.mas_equalTo(kMainScreenWidth);
                 make.right.equalTo(view);
                 make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
             }];
             
-            [view addSubview:self.scoretransferButton];
-            
-            [self.scoretransferButton mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(view);
-                make.width.mas_equalTo(kMainScreenWidth/2-0.5);
-                make.left.equalTo(view);
-                make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
-            }];
+//            [view addSubview:self.scoretransferButton];
+//            
+//            [self.scoretransferButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//                make.bottom.equalTo(view);
+//                make.width.mas_equalTo(kMainScreenWidth/2-0.5);
+//                make.left.equalTo(view);
+//                make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
+//            }];
             
             tableView = [UITableView createTableViewWithDelegateTarget:self];
 //            tableView.frame = CGRectMake(i*kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight-self.lebSegmentview.frame.size.height- 64 - self.leScoreSegmentView.frame.size.height);
@@ -307,12 +307,12 @@
             [self.scrollView addSubview:view];
         }else if(i == 1){
             
-            [self.transferButton mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.view);
-                make.width.equalTo(self.view);
-                make.centerX.equalTo(self.view);
-                make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
-            }];
+//            [self.transferButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//                make.bottom.equalTo(self.view);
+//                make.width.equalTo(self.view);
+//                make.centerX.equalTo(self.view);
+//                make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
+//            }];
             
             tableView = [UITableView createTableViewWithDelegateTarget:self];
             tableView.frame = CGRectMake(i*kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight-self.lebSegmentview.frame.size.height-64);
@@ -614,9 +614,9 @@
         [self.withdrawButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
         }];
-        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(0);
-        }];
+//        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.height.mas_equalTo(0);
+//        }];
     }else if(item == 1){            ///乐豆
         [self.lebSegmentview setItems:@[@"累计乐豆",@"当前乐豆"]];
         [self.lebSegmentview setItemCount:[DATAMODEL.henUtil string:DATAMODEL.userInfoData.totalLeBean showDotNumber:4] index:0];
@@ -627,9 +627,9 @@
         [self.withdrawButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(0);
         }];
-        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
-        }];
+//        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
+//        }];
     }
     
     //加载数据
@@ -727,9 +727,9 @@
         [self.withdrawButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
         }];
-        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(0);
-        }];
+//        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.height.mas_equalTo(0);
+//        }];
     }else if(self.currentItem == 1){            ///乐豆
         [self.lebSegmentview setItems:@[@"累计乐豆",@"当前乐豆"]];
         [self.lebSegmentview setItemCount:[DATAMODEL.henUtil string:DATAMODEL.userInfoData.totalLeBean showDotNumber:4] index:0];
@@ -740,9 +740,9 @@
         [self.withdrawButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(0);
         }];
-        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
-             make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
-        }];
+//        [self.transferButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//             make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
+//        }];
     }
 }
 
@@ -922,7 +922,7 @@
         _transferButton = [UIButton createButtonWithTitle:HenLocalizedString(@"转账") backgroundNormalImage:@"public_big_button" backgroundPressImage:@"public_big_button_press" target:self action:@selector(onTransferAction:)];
         _transferButton.titleLabel.font = kFontSize_36;
         [_transferButton setTitleClor:kFontColorWhite];
-        [self.view addSubview:_transferButton];
+//        [self.view addSubview:_transferButton];
     }
     return _transferButton;
 }

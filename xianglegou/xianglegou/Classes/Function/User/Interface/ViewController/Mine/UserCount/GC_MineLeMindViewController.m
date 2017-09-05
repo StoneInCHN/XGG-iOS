@@ -90,13 +90,13 @@
         make.centerX.equalTo(self.view);
         make.bottom.equalTo(self.view);
     }];
-    [self.transferButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view);
-//        make.top.equalTo(self.tableView.mas_bottom);
-        make.width.equalTo(self.view);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
-    }];
+//    [self.transferButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.equalTo(self.view);
+////        make.top.equalTo(self.tableView.mas_bottom);
+//        make.width.equalTo(self.view);
+//        make.centerX.equalTo(self.view);
+//        make.height.mas_equalTo(HEIGHT_TRANSFORMATION(99));
+//    }];
     
 }
 
@@ -273,7 +273,7 @@
         _transferButton = [UIButton createButtonWithTitle:HenLocalizedString(@"转账") backgroundNormalImage:@"public_big_button" backgroundPressImage:@"public_big_button_press" target:self action:@selector(onTransferAction:)];
         _transferButton.titleLabel.font = kFontSize_36;
         [_transferButton setTitleClor:kFontColorWhite];
-         [self.view addSubview:_transferButton];
+//         [self.view addSubview:_transferButton];
     }
     return _transferButton;
 }
