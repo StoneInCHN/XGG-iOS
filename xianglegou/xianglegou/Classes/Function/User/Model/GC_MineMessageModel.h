@@ -113,7 +113,8 @@
 ///业务员上传商家权限是否开启
 @property (nonatomic, strong) NSString *isSalesmanApply;
 
-
+///  是否开启推送
+@property(nonatomic, assign) BOOL isPushMsg;
 
 
 @end

@@ -23,6 +23,16 @@
     }];
 }
 
+- (void)setPushSwitch:(BOOL)isOn {
+    self.pushParam.userId = DATAMODEL.userId;
+    self.pushParam.token = DATAMODEL.token;
+    self.pushParam.msgSwitch = isOn == true ? @"true": @"false";
+    [[Hen_MessageManager shareMessageManager] requestWithAction:pushMsgSwitch
+                                                dictionaryParam:self.pushParam.toDictionary withResultBlock:^(NSString *code, NSString *desc, id msg, id page) {
+                                                    
+                                                }];
+}
+
 #pragma mark -- private
 
 - (void)setupPushWithResultBlock:(RequestResultBlock)resultBlock {

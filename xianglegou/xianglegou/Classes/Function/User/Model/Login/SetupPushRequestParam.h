@@ -17,4 +17,6 @@
 @property (nonatomic, strong) NSString *jpushRegId;
 /*手机平台*/
 @property (nonatomic, strong) NSString *appPlatform;
+// 推送开关 true:开启; false:
+@property(nonatomic, assign) NSString * msgSwitch;
 @end

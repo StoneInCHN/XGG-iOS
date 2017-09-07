@@ -110,7 +110,7 @@
                                 stringByReplacingOccurrencesOfString: @" " withString: @""];
     NSLog(@"=====DeviceToken:%@", deviceTokenStr);
     DATAMODEL.deviceToken = deviceTokenStr;
-    
+
     /// Required - 注册 DeviceToken
     [JPUSHService registerDeviceToken:deviceToken];
 }

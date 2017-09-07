@@ -12,16 +12,16 @@
 #define Hen_ConfigDefine_h
 
 ///是否开发
-#define IsDevelopment   0
+#define IsDevelopment   1
 
 #pragma mark -- 服务器地址
 
 ///生产环境
 //#define APP_SERVER                 @"http://120.77.42.164"
-#define APP_SERVER               @"http://xgg.wa12580.cn"
+//#define APP_SERVER               @"http://xgg.wa12580.cn"
 
 /// 测试
-//#define APP_SERVER               @"http://118.190.83.191:10001"
+#define APP_SERVER               @"http://118.190.83.191:10001"
 
 
 #pragma mark -- 字体颜色

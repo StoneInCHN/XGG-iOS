@@ -10,10 +10,10 @@
 
 #import "GC_SettingViewController.h"
 #import "GC_SettingTableViewCell.h"
-
+#import "PushSwitchTableViewCell.h"
 #import "QL_UserPublishCommentViewController.h"
 #import "GC_WithdrawViewController.h"
-
+#import "UserPushViewModel.h"
 
 @interface GC_SettingViewController ()
 
@@ -70,15 +70,27 @@
 #pragma mark -- UITableViewDataSource, UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GC_SettingTableViewCell *cell = [GC_SettingTableViewCell cellWithTableView:tableView];
-    cell.icon = self.dataSource[indexPath.row][0];
-    cell.title = self.dataSource[indexPath.row][1];
-    cell.bottomLongLineImage.hidden = NO;
-    if(indexPath.row == 0){       //清除缓存
+    NSString * title = self.dataSource[indexPath.row][1];
+    if([title isEqualToString:@"清除缓存"]){       //
+        GC_SettingTableViewCell *cell = [GC_SettingTableViewCell cellWithTableView:tableView];
+        cell.icon = self.dataSource[indexPath.row][0];
+        cell.title = title;
+        cell.bottomLongLineImage.hidden = NO;
         float tmpSize = [SDImageCache sharedImageCache].getDiskCount;
         cell.content = tmpSize >= 1 ? [NSString stringWithFormat:@"%.1fM",tmpSize] : [NSString stringWithFormat:@"%.1fK",tmpSize * 1024];
+        return cell;
+    } else if([title isEqualToString:@"允许推送消息"]) {
+        PushSwitchTableViewCell *cell = [PushSwitchTableViewCell cellWithTableView:tableView];
+        cell.title = title;
+        cell.icon = self.dataSource[indexPath.row][0];
+        WEAKSelf;
+        cell.switchBlock = ^(BOOL isOn) {
+            [weakSelf requestPushSwitch:isOn];
+        };
+        return cell;
+    } else {
+        return [[UITableViewCell alloc]init];
     }
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,13 +142,20 @@
     }
 }
 
+- (void)requestPushSwitch: (BOOL)isOn {
+    if (DATAMODEL.userId && DATAMODEL.token) {
+        UserPushViewModel * viewModel = [[UserPushViewModel alloc]init];
+        [viewModel setPushSwitch:isOn];
+    }
+}
 
 #pragma mark -- getter,setter
 - (NSMutableArray *)dataSource
 {
     if(!_dataSource){
         _dataSource = [[NSMutableArray alloc] initWithCapacity:0];
-        [_dataSource addObjectsFromArray:@[@[@"mine_delete",@"清除缓存"]]];
+        [_dataSource addObjectsFromArray:@[@[@"mine_delete",@"清除缓存"],
+                                           @[@"mine_push",@"允许推送消息"]]];
     }
     return _dataSource;
 }

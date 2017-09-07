@@ -10,6 +10,8 @@
 #import "SetupPushRequestParam.h"
 
 @interface UserPushViewModel : Hen_BaseViewModel
-
--(void)uploadPushRegisterId;
+/// 上传regiterId
+- (void)uploadPushRegisterId;
+/// 设置消息推送开关
+- (void)setPushSwitch: (BOOL)isOn;
 @end

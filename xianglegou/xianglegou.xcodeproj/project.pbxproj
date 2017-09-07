@@ -18,6 +18,7 @@
 		CD11F42B1F57E933000AE75E /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11F4261F57E933000AE75E /* BaiduMapAPI_Utils.framework */; };
 		CD11F42E1F57EA18000AE75E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11F42C1F57EA18000AE75E /* libcrypto.a */; };
 		CD11F42F1F57EA18000AE75E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11F42D1F57EA18000AE75E /* libssl.a */; };
+		CD2E92501F612D7700A66ABF /* PushSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E924F1F612D7700A66ABF /* PushSwitchTableViewCell.m */; };
 		CD6D3EF71F567B4F00127852 /* JiuPaiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */; };
 		CDA092F91F5CE75500A13B01 /* jcore-ios-1.1.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */; };
 		CDA092FA1F5CE75500A13B01 /* jpush-ios-3.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */; };
@@ -27,6 +28,7 @@
 		CDA093021F5CE82E00A13B01 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA093011F5CE82E00A13B01 /* AdSupport.framework */; };
 		CDA093061F5D3AE800A13B01 /* SetupPushRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA093051F5D3AE800A13B01 /* SetupPushRequestParam.m */; };
 		CDA093091F5D3BD600A13B01 /* UserPushViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA093081F5D3BD600A13B01 /* UserPushViewModel.m */; };
+		CDEF62B11F61519800071D3F /* mine_push@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEF62B01F61519800071D3F /* mine_push@2x.png */; };
 		EC00BEEE1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */; };
 		EC00C0BB1ED51452009B3AFC /* GC_AddWarningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BA1ED51452009B3AFC /* GC_AddWarningTableViewCell.m */; };
 		EC00C0BE1ED56672009B3AFC /* GC_BankBindingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC00C0BD1ED56672009B3AFC /* GC_BankBindingModel.m */; };
@@ -802,6 +804,8 @@
 		CD11F4261F57E933000AE75E /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		CD11F42C1F57EA18000AE75E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		CD11F42D1F57EA18000AE75E /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		CD2E924E1F612D7700A66ABF /* PushSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushSwitchTableViewCell.h; sourceTree = "<group>"; };
+		CD2E924F1F612D7700A66ABF /* PushSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushSwitchTableViewCell.m; sourceTree = "<group>"; };
 		CD6D3EF51F567B4F00127852 /* JiuPaiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiuPaiWebViewController.h; sourceTree = "<group>"; };
 		CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiuPaiWebViewController.m; sourceTree = "<group>"; };
 		CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.5.a"; sourceTree = "<group>"; };
@@ -816,6 +820,7 @@
 		CDA093051F5D3AE800A13B01 /* SetupPushRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupPushRequestParam.m; sourceTree = "<group>"; };
 		CDA093071F5D3BD600A13B01 /* UserPushViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPushViewModel.h; sourceTree = "<group>"; };
 		CDA093081F5D3BD600A13B01 /* UserPushViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPushViewModel.m; sourceTree = "<group>"; };
+		CDEF62B01F61519800071D3F /* mine_push@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_push@2x.png"; sourceTree = "<group>"; };
 		EC00BEEC1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_ShopReplyCommentTableViewCell.h; sourceTree = "<group>"; };
 		EC00BEED1EA0B41C004BB506 /* GC_ShopReplyCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC_ShopReplyCommentTableViewCell.m; sourceTree = "<group>"; };
 		EC00C0B91ED51452009B3AFC /* GC_AddWarningTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC_AddWarningTableViewCell.h; sourceTree = "<group>"; };
@@ -2333,6 +2338,8 @@
 			children = (
 				ECB12DB01E94ED6B006F1EE8 /* GC_SettingTableViewCell.h */,
 				ECB12DB11E94ED6B006F1EE8 /* GC_SettingTableViewCell.m */,
+				CD2E924E1F612D7700A66ABF /* PushSwitchTableViewCell.h */,
+				CD2E924F1F612D7700A66ABF /* PushSwitchTableViewCell.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -3753,6 +3760,7 @@
 		FC2E7A271E8A6CB40005C176 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				CDEF62B01F61519800071D3F /* mine_push@2x.png */,
 				EC9633B01F0A233A00D3B05A /* mine_number@2x.png */,
 				EC9633AE1F0A160100D3B05A /* mine_date@2x.png */,
 				EC9633A31F09E20A00D3B05A /* mine_page4@2x.png */,
@@ -4720,6 +4728,7 @@
 				EC8D824E1F131D51007C6631 /* time4.png in Resources */,
 				EC99EF101EBB4F58000FC861 /* homepage_classify_icon_chongzhi@2x.png in Resources */,
 				EC99EF011EBB4F58000FC861 /* homepage_classify_icon_other@2x.png in Resources */,
+				CDEF62B11F61519800071D3F /* mine_push@2x.png in Resources */,
 				EC05B6EE1E9657CD0039F589 /* mine_update@2x.png in Resources */,
 				EC9633A11F09D9F900D3B05A /* mine_page1@2x.png in Resources */,
 				FC15C5E21EB1F542003C0CB7 /* public_back1@2x.png in Resources */,
@@ -5071,6 +5080,7 @@
 				FC25DD111E73A21A008904AB /* UIPageControl+CreatePageControl.m in Sources */,
 				EC363B321F01F9C7002CE12A /* GC_LeBeanDeductibleTableViewCell.m in Sources */,
 				FC25DCD61E73A21A008904AB /* UIImageView+WebCache.m in Sources */,
+				CD2E92501F612D7700A66ABF /* PushSwitchTableViewCell.m in Sources */,
 				FC25DCC51E73A21A008904AB /* MSSBrowseZoomScrollView.m in Sources */,
 				FC069C231E8D3B0600945DD1 /* QL_ShopInformationViewController.m in Sources */,
 				FC786ECF1E8104F10019F90F /* QL_HPTopSearchView.m in Sources */,

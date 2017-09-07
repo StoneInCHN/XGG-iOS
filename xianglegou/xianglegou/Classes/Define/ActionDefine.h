@@ -204,5 +204,7 @@
 
 /// 设置推送ID
 #define set_pushId                      @"/rebate-interface/common/setJpushId.jhtml"
+/// 设置消息推送开关
+#define pushMsgSwitch                      @"/rebate-interface/common/pushMsgSwitch.jhtml"
 
 #endif /* ActionDefine_h */
