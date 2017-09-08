@@ -219,6 +219,7 @@
             if (DATAMODEL.token.length != 0 && DATAMODEL.userId.length != 0) {
                 UserPushViewModel * viewModel = [[ UserPushViewModel alloc]init];
                 [viewModel uploadPushRegisterId];
+                NSLog(@"===========registerID==========%@", registrationID);
             }
         }
     }];
@@ -229,6 +230,7 @@
     NSDictionary *userInfo = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo) {
         NSLog(@"push message: %@", userInfo);
+        UIApplication.sharedApplication.applicationIconBadgeNumber = 0;
     }
 }
 
@@ -245,6 +247,7 @@
 
 // iOS 10 Support
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+     UIApplication.sharedApplication.applicationIconBadgeNumber = 0;
     // Required
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {

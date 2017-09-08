@@ -19,7 +19,9 @@
     self.pushParam.userId = DATAMODEL.userId;
     self.pushParam.token = DATAMODEL.token;
     self.pushParam.jpushRegId = DATAMODEL.registerId;
+    self.pushParam.appPlatform = @"IOS";
     [self setupPushWithResultBlock:^(NSString *code, NSString *desc, id msg, id page) {
+         NSLog(@"=======uploadPushRegisterId====code:%@==========registerId:%@", code, DATAMODEL.registerId);
     }];
 }
 
