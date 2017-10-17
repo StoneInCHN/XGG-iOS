@@ -21,6 +21,9 @@
 		CD2E92501F612D7700A66ABF /* PushSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E924F1F612D7700A66ABF /* PushSwitchTableViewCell.m */; };
 		CD57D6601F6256F100773B74 /* mine_push@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD57D65F1F6256F100773B74 /* mine_push@2x.png */; };
 		CD6D3EF71F567B4F00127852 /* JiuPaiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */; };
+		CD8DA7BA1F95988D00C5C010 /* MallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DA7B91F95988D00C5C010 /* MallViewController.m */; };
+		CD8DA7C11F95A2D300C5C010 /* public_tool_bar_icon_mall_choose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DA7BF1F95A2CB00C5C010 /* public_tool_bar_icon_mall_choose@2x.png */; };
+		CD8DA7C21F95A2D500C5C010 /* public_tool_bar_icon_mall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DA7C01F95A2CC00C5C010 /* public_tool_bar_icon_mall@2x.png */; };
 		CDA092F91F5CE75500A13B01 /* jcore-ios-1.1.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */; };
 		CDA092FA1F5CE75500A13B01 /* jpush-ios-3.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */; };
 		CDA092FC1F5CE7C900A13B01 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA092FB1F5CE7C900A13B01 /* CoreFoundation.framework */; };
@@ -809,6 +812,10 @@
 		CD57D65F1F6256F100773B74 /* mine_push@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_push@2x.png"; sourceTree = "<group>"; };
 		CD6D3EF51F567B4F00127852 /* JiuPaiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiuPaiWebViewController.h; sourceTree = "<group>"; };
 		CD6D3EF61F567B4F00127852 /* JiuPaiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiuPaiWebViewController.m; sourceTree = "<group>"; };
+		CD8DA7B81F95988D00C5C010 /* MallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallViewController.h; sourceTree = "<group>"; };
+		CD8DA7B91F95988D00C5C010 /* MallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallViewController.m; sourceTree = "<group>"; };
+		CD8DA7BF1F95A2CB00C5C010 /* public_tool_bar_icon_mall_choose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "public_tool_bar_icon_mall_choose@2x.png"; sourceTree = "<group>"; };
+		CD8DA7C01F95A2CC00C5C010 /* public_tool_bar_icon_mall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "public_tool_bar_icon_mall@2x.png"; sourceTree = "<group>"; };
 		CDA092F61F5CE75500A13B01 /* jcore-ios-1.1.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.5.a"; sourceTree = "<group>"; };
 		CDA092F71F5CE75500A13B01 /* jpush-ios-3.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.6.a"; sourceTree = "<group>"; };
 		CDA092F81F5CE75500A13B01 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
@@ -2087,6 +2094,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD8DA7B21F95986A00C5C010 /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				CD8DA7B31F95986A00C5C010 /* ViewModel */,
+				CD8DA7B41F95986A00C5C010 /* Interface */,
+				CD8DA7B71F95986A00C5C010 /* Model */,
+			);
+			path = Mall;
+			sourceTree = "<group>";
+		};
+		CD8DA7B31F95986A00C5C010 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD8DA7B41F95986A00C5C010 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CD8DA7B51F95986A00C5C010 /* View */,
+				CD8DA7B61F95986A00C5C010 /* ViewController */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		CD8DA7B51F95986A00C5C010 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD8DA7B61F95986A00C5C010 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD8DA7B81F95988D00C5C010 /* MallViewController.h */,
+				CD8DA7B91F95988D00C5C010 /* MallViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD8DA7B71F95986A00C5C010 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EC00BEEB1EA0B41C004BB506 /* ShopOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -2509,6 +2565,8 @@
 		FC15C5A31EB1F542003C0CB7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				CD8DA7BF1F95A2CB00C5C010 /* public_tool_bar_icon_mall_choose@2x.png */,
+				CD8DA7C01F95A2CC00C5C010 /* public_tool_bar_icon_mall@2x.png */,
 				ECD25FBD1F061FDE00953BD1 /* public_ledou@2x.png */,
 				ECD25FBB1F06100C00953BD1 /* public_label@2x.png */,
 				EC899B391EC54D2600E6F71B /* public_shopping_cart1@2x.png */,
@@ -4332,6 +4390,7 @@
 		FCADBEF81DDD4D240035F011 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				CD8DA7B21F95986A00C5C010 /* Mall */,
 				FC25DDB91E73EB2D008904AB /* HomePage */,
 				FC25DDA71E73E98F008904AB /* Index */,
 				FC25DDAD1E73E98F008904AB /* Abonus */,
@@ -4616,6 +4675,9 @@
 						DevelopmentTeam = J7VJEFQF7J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -4769,6 +4831,7 @@
 				FC2E7AE21E8A6CB50005C176 /* homepage_page@2x.png in Resources */,
 				EC34F5351EBAC4BB0084CE40 /* homepage_rebate_picture@2x.png in Resources */,
 				FC25DCDD1E73A21A008904AB /* photo_number_icon@2x.png in Resources */,
+				CD8DA7C21F95A2D500C5C010 /* public_tool_bar_icon_mall@2x.png in Resources */,
 				FC2E7AE51E8A6CB50005C176 /* homepage_pay_icon_ledou@2x.png in Resources */,
 				EC7532C41EC43C4300999A60 /* mine_shop_icon_qr_loan@2x.png in Resources */,
 				ECB4EB891ED3E7BE0097A5DF /* mine_choose@2x.png in Resources */,
@@ -4930,6 +4993,7 @@
 				FC25DCE11E73A21A008904AB /* photo_sel_previewVc@2x.png in Resources */,
 				FC2E7ABD1E8A6CB50005C176 /* mine_qr_code_scan_frame@2x.png in Resources */,
 				FC15C5F91EB1F542003C0CB7 /* public_botton_small_order_white_press@2x.png in Resources */,
+				CD8DA7C11F95A2D300C5C010 /* public_tool_bar_icon_mall_choose@2x.png in Resources */,
 				EC99EF041EBB4F58000FC861 /* homepage_classify_icon_lvyou@2x.png in Resources */,
 				ECD25FBE1F061FDE00953BD1 /* public_ledou@2x.png in Resources */,
 				EC363B361F020B6D002CE12A /* homepage_switch_on@2x.png in Resources */,
@@ -5036,6 +5100,7 @@
 				FC25DC891E73A21A008904AB /* MagicalRecord.m in Sources */,
 				EC1BEE921E8250960095AB02 /* GC_MineViewController.m in Sources */,
 				8C3B4DCD1F41C7DE008A0CCC /* LZ_TransferSegmentView.m in Sources */,
+				CD8DA7BA1F95988D00C5C010 /* MallViewController.m in Sources */,
 				FC069C181E8CA71100945DD1 /* QL_PayBillViewModel.m in Sources */,
 				FC3C72D81E98E96700451F71 /* SGQRCodeScanningView.m in Sources */,
 				FC52FD501E83F06200DB2729 /* QL_InditorView.m in Sources */,

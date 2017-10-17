@@ -13,7 +13,7 @@
 #import "QL_HomePageViewController.h"
 #import "QL_AbonusViewController.h"
 #import "GC_MineViewController.h"
-
+#import "MallViewController.h"
 #import "GC_LoginViewController.h"
 
 @interface RebateTabBarViewController ()<UITabBarControllerDelegate>
@@ -48,16 +48,16 @@
 - (void)loadSubView
 {
     UIViewController *nav0 = [[Hen_BaseNavigationViewController alloc] initWithRootViewController:[[QL_HomePageViewController alloc] init]];
-    
     UIViewController *nav1 = [[Hen_BaseNavigationViewController alloc] initWithRootViewController:[[QL_AbonusViewController alloc] init]];
-    
-    UIViewController *nav2 = [[Hen_BaseNavigationViewController alloc] initWithRootViewController:[[GC_MineViewController alloc] init]];
-    
+     UIViewController *nav2 = [[Hen_BaseNavigationViewController alloc] initWithRootViewController:[[MallViewController alloc] init]];
+    UIViewController *nav3 = [[Hen_BaseNavigationViewController alloc] initWithRootViewController:[[GC_MineViewController alloc] init]];
+    // MallViewController
     NSArray *itemTitles = @[@"首页",
                             @"分红",
+                             @"商城",
                             @"我的"];
     
-    self.viewControllers = @[nav0,nav1,nav2];
+    self.viewControllers = @[nav0, nav1, nav2, nav3];
     self.tabBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithHexString:@"#f3f3f3"];
     
@@ -75,10 +75,12 @@
     //@"quickplay_tabbar_normal.png"
     NSArray *imageName = @[@"public_tool_bar_icon_homepage",
                            @"public_tool_bar_icon_bonus",
+                            @"public_tool_bar_icon_mall",
                            @"public_tool_bar_icon_mine"];
     //@"quickplay_tabbar_select.png"
     NSArray *selectImageName = @[@"public_tool_bar_icon_homepage_choose",
                                  @"public_tool_bar_icon_bonus_choose",
+                                  @"public_tool_bar_icon_mall_choose",
                                  @"public_tool_bar_icon_mine_choose"];
     
     for (int i = 0; i < self.tabBar.items.count; i ++) {
