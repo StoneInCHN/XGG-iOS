@@ -58,7 +58,7 @@
 #pragma mark - Data
 - (void)loadData {
     NSString * urlString = mall_baseURL;
-    NSString * body = [NSString stringWithFormat:@"userid=%@&token=%@&mobile=%@",DATAMODEL.userId,DATAMODEL.token,DATAMODEL.userDBHelper.getUserMoblie];
+    NSString * body = [NSString stringWithFormat:@"userid=%@&token=%@&mobile=%@",DATAMODEL.userDBHelper.getUserId,DATAMODEL.userDBHelper.getToken,DATAMODEL.userDBHelper.getUserMoblie];
     NSString *urlStr = [NSString stringWithFormat:@"%@?%@", urlString, body];
     urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"%@",urlStr);
