@@ -207,4 +207,6 @@
 /// 设置消息推送开关
 #define pushMsgSwitch                      @"/rebate-interface/common/pushMsgSwitch.jhtml"
 
+/// 商城
+#define mall_baseURL    @"http://119.23.48.5:8080/pss/weixin/index.html"
 #endif /* ActionDefine_h */

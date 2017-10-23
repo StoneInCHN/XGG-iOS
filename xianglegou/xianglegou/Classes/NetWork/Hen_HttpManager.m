@@ -27,7 +27,8 @@
   withResultBlock:(HttpPostRequestResultBlock)resultBlock
 {
     [self setRequest];
-    
+    NSLog(@"url----%@",url);
+    NSLog(@"param----%@",param);
     [self POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self requestSuccessForResponseObject:responseObject andRequestId:requestId withResultBlock:resultBlock];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

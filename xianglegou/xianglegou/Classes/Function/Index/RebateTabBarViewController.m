@@ -113,7 +113,7 @@
 ///UITabbarcontroller实现点击某个指定的tabbaritem后不跳转 ,实现代理UITabBarControllerDelegate
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    if(viewController == [tabBarController.viewControllers objectAtIndex:1]){ // 分红
+    if(viewController == [tabBarController.viewControllers objectAtIndex:1]){ // 1 分红 2 商城
         //判断是否登录
         if(!DATAMODEL.isLogin){
             GC_LoginViewController *lVC = [[GC_LoginViewController alloc] init];
@@ -130,6 +130,24 @@
             [[DATAMODEL.henUtil getCurrentViewController].navigationController pushViewController:lVC animated:YES];
             return NO;
         }
+    } else if(viewController == [tabBarController.viewControllers objectAtIndex:2]) {
+        //判断是否登录
+        if(!DATAMODEL.isLogin){
+            GC_LoginViewController *lVC = [[GC_LoginViewController alloc] init];
+            lVC.hidesBottomBarWhenPushed = YES;
+            //回调
+            lVC.onLoginSuccessBlock = ^(){
+                //延迟0.2s
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    UITabBarController *tabbar = (UITabBarController *)[[[UIApplication sharedApplication] delegate] window].rootViewController;
+                    tabbar.selectedIndex = 2;
+                });
+            };
+            
+            [[DATAMODEL.henUtil getCurrentViewController].navigationController pushViewController:lVC animated:YES];
+            return NO;
+        }
+
     }
     return YES;
 }

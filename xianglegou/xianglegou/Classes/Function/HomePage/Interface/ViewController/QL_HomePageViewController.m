@@ -112,7 +112,7 @@
 - (void)loadSubView
 {
     self.view.backgroundColor = kCommonBackgroudColor;
-    
+    self.automaticallyAdjustsScrollViewInsets = false;
     [self activeView];
     [self topSearchView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -6,8 +6,8 @@
 //  Copyright © 2017年 xianglegou. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Hen_BaseViewController.h"
 
-@interface MallViewController : UIViewController
+@interface MallViewController : Hen_BaseViewController
 
 @end
