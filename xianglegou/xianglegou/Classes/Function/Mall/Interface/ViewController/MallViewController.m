@@ -60,7 +60,8 @@
     NSString * urlString = mall_baseURL;
     NSString * body = [NSString stringWithFormat:@"userid=%@&token=%@&mobile=%@",DATAMODEL.userId,DATAMODEL.token,DATAMODEL.userDBHelper.getUserMoblie];
     NSString *urlStr = [NSString stringWithFormat:@"%@?%@", urlString, body];
-    urlStr = [@"http://119.23.48.5:8080/pss/weixin/index.html?userid=1&token=cae48e81-af47-44b0-82c6-2e5a4267ced0__1508653200090&mobile=13540285429" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@",urlStr);
     NSURL *url = [[ NSURL alloc] initWithString:urlStr];
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;
