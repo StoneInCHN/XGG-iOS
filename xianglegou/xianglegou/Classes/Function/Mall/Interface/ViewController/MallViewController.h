@@ -9,5 +9,5 @@
 #import "Hen_BaseViewController.h"
 
 @interface MallViewController : Hen_BaseViewController
-
+-(void)loadData;
 @end

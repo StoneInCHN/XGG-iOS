@@ -36,6 +36,11 @@
 }
 #pragma mark - UI
 
+- (void)resetUI {
+    if ([self.view.subviews containsObject:self.webView]) {
+        [self.webView removeFromSuperview];
+    }
+}
 - (void)setupUI {
     [self.view addSubview:self.webView];
     self.automaticallyAdjustsScrollViewInsets = false;
@@ -102,6 +107,26 @@
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURLRequest * request = navigationAction.request;
+     NSString * reqUrl = navigationAction.request.URL.absoluteString;
+    if ([reqUrl hasPrefix:@"alipays://"] || [reqUrl hasPrefix:@"alipay://"]) {
+        BOOL bSucc = [[UIApplication sharedApplication]openURL:request.URL];
+        
+        if (!bSucc) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                           message:@"未检测到支付宝客户端，请安装后重试。"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"立即安装"
+                                                 otherButtonTitles:nil];
+            [alert show];
+        }
+    }
     decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSString* urlStr = @"https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8";
+    NSURL *downloadUrl = [NSURL URLWithString:urlStr];
+    [[UIApplication sharedApplication]openURL:downloadUrl];
 }
 @end

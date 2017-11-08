@@ -17,7 +17,6 @@
 #import "GC_LoginViewController.h"
 
 @interface RebateTabBarViewController ()<UITabBarControllerDelegate>
-
 @end
 
 @implementation RebateTabBarViewController
@@ -25,8 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self loadSubView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -146,8 +149,13 @@
             
             [[DATAMODEL.henUtil getCurrentViewController].navigationController pushViewController:lVC animated:YES];
             return NO;
+        } else {
+            if (  [[DATAMODEL.henUtil getCurrentViewController] isKindOfClass:MallViewController.class] ){
+                    MallViewController * mallVC = (MallViewController*)[DATAMODEL.henUtil getCurrentViewController];
+                    [mallVC loadData];
+            }
         }
-
+        
     }
     return YES;
 }
